@@ -48,6 +48,8 @@ return {
 				"pylint",
 				"clangd",
 				"denols",
+				"djlint",
+				"autopep8",
 				{ "eslint_d", version = "13.1.2" },
 			},
 		})

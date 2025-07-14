@@ -1,3 +1,7 @@
+if vim.g.vscode then
+	retrun({})
+end
+
 return {
 	"williamboman/mason.nvim",
 	lazy = false,

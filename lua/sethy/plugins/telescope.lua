@@ -1,5 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
+	enabled = not vim.g.vscode,
 	branch = "0.1.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -44,6 +45,11 @@ return {
 			builtin.grep_string({ search = word })
 		end, { desc = "Find Connected Words under cursor" })
 
-		vim.keymap.set("n", "<leader>ths", "<cmd>Telescope themes<CR>", { noremap = true, silent = true, desc = "Theme Switcher" })
-    end,
+		vim.keymap.set(
+			"n",
+			"<leader>ths",
+			"<cmd>Telescope themes<CR>",
+			{ noremap = true, silent = true, desc = "Theme Switcher" }
+		)
+	end,
 }

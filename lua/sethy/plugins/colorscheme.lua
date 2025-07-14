@@ -3,6 +3,7 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+		enabled = not vim.g.vscode,
 		-- priority = 1000,
 		config = function()
 			require("rose-pine").setup({
@@ -41,6 +42,7 @@ return {
 	-- NOTE: gruvbox
 	{
 		"ellisonleao/gruvbox.nvim",
+		enabled = false,
 		-- priority = 1000 ,
 		config = function()
 			require("gruvbox").setup({
@@ -74,6 +76,7 @@ return {
 	-- NOTE: Kanagwa
 	{
 		"rebelot/kanagawa.nvim",
+		enabled = false,
 		config = function()
 			require("kanagawa").setup({
 				compile = false, -- enable compiling the colorscheme
@@ -136,6 +139,7 @@ return {
 	-- NOTE: neosolarized
 	{
 		"craftzdog/solarized-osaka.nvim",
+		enabled = false,
 		lazy = false,
 		config = function()
 			require("solarized-osaka").setup({
@@ -194,6 +198,7 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		name = "folkeTokyonight",
+		enabled = not vim.g.vscode,
 		-- priority = 1000,
 		config = function()
 			local transparent = true

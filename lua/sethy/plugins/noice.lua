@@ -1,10 +1,9 @@
 return {
 	{
 		"folke/noice.nvim",
+		enabled = not vim.g.vscode,
 		event = "VeryLazy",
-        enabled = true,
-		opts = {
-		},
+		opts = {},
 		dependencies = {
 			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 			"MunifTanjim/nui.nvim",
@@ -18,9 +17,9 @@ return {
 					view = "cmdline_popup",
 					format = {
 						cmdline = { pattern = "", icon = "󱐌 :", lang = "vim" },
-                        help = { pattern = "^:%s*he?l?p?%s+", icon = " 󰮦 :" },
-                        search_down = { kind = "search", pattern = "^/", icon = "/", lang = "regex" },
-                        search_up = { kind = "search", pattern = "^%?", icon = "/", lang = "regex" },
+						help = { pattern = "^:%s*he?l?p?%s+", icon = " 󰮦 :" },
+						search_down = { kind = "search", pattern = "^/", icon = "/", lang = "regex" },
+						search_up = { kind = "search", pattern = "^%?", icon = "/", lang = "regex" },
 						filter = { pattern = "^:%s*!", icon = " $ :", lang = "bash" },
 						lua = {
 							pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" },
@@ -30,29 +29,29 @@ return {
 						input = { view = "cmdline_input", icon = " 󰥻 :" }, -- Used by input()
 					},
 				},
-                views = {
-                    popupmenu = {
-                        relative = "editor",
-                        position = {
-                            row = 8,
-                            col = "50%",
-                        },
-                        win_options = {
-                            winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
-                        },
-                    },
-                    mini = {
-                        size = {
-                            width = "auto",
-                            height = "auto",
-                            max_height = 15,
-                        },
-                        position = {
-                            row = -2,
-                            col = "100%",
-                        },
-                    }
-                },
+				views = {
+					popupmenu = {
+						relative = "editor",
+						position = {
+							row = 8,
+							col = "50%",
+						},
+						win_options = {
+							winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+						},
+					},
+					mini = {
+						size = {
+							width = "auto",
+							height = "auto",
+							max_height = 15,
+						},
+						position = {
+							row = -2,
+							col = "100%",
+						},
+					},
+				},
 
 				lsp = {
 					progress = {
@@ -73,29 +72,29 @@ return {
 				-- 	inc_rename = false, -- enables an input dialog for inc-rename.nvim
 				-- 	lsp_doc_border = false, -- add a border to hover docs and signature help
 				-- },
-                routes = {
-                    {
-                        filter = {
-                            event = 'msg_show',
-                            any = {
-                                { find = '%d+L, %d+B' },
-                                { find = '; after #%d+' },
-                                { find = '; before #%d+' },
-                                { find = '%d fewer lines' },
-                                { find = '%d more lines' },
-                            },
-                        },
-                        opts = { skip = true },
-                    }
-                },
+				routes = {
+					{
+						filter = {
+							event = "msg_show",
+							any = {
+								{ find = "%d+L, %d+B" },
+								{ find = "; after #%d+" },
+								{ find = "; before #%d+" },
+								{ find = "%d fewer lines" },
+								{ find = "%d more lines" },
+							},
+						},
+						opts = { skip = true },
+					},
+				},
 
 				messages = {
 					enabled = false,
 				},
 
-                health = {
-                    checker = true,
-                },
+				health = {
+					checker = true,
+				},
 
 				popupmenu = {
 					enabled = true,
